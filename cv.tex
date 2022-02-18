@@ -1,0 +1,162 @@
+\documentclass[a4paper]{article}
+
+\usepackage{tabularx}
+\bibliographystyle{IEEE}
+
+\renewcommand\refname{Selected publications}
+%\usepackage{doublespace}
+%\setstretch{1.2}
+
+\usepackage{aeguill}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{a4wide}
+\usepackage{url}
+\usepackage{CV}
+
+\begin{document}
+
+\pagestyle{empty}
+
+%Ueberschrift
+\begin{center}
+\huge{\textsc{Curriculum Vitae}}
+\vspace{0.3cm}
+
+\Large{\textsc{Simon Kågström}}
+\end{center}
+\vspace{0.5cm}
+
+\section{Address~~~~~~~~~~~~~~~~~~~~~~~~~~~~Contact}
+\begin{table}[h]
+\begin{tabular}{@{}lll@{}}
+  Sankt Mickelsgatan 176~~~~~~~~~~~~~~~~~~~~~~&  Phone (mobile):& +46-709-263844 \\
+  129 44 Stockholm & \\
+  Sweden & Email: & \texttt{simon.kagstrom@gmail.com} \\
+\end{tabular}
+\end{table}
+
+
+\section{Education}
+
+\begin{CV}
+\item[2002--2008] Ph.D. in Computer Systems Engineering at Blekinge Institute of Technology,
+  Sweden.
+
+  \begin{itemize}
+  \item Research on SMP operating system porting and binary translation.
+  \item Research member of the Parallel Architecture and Applications for
+    Real-Time systems group.
+  \end{itemize}
+
+\item[1998--2002] MA of Computer Science, Lund University, Sweden.
+  \begin{itemize}
+  \item Specialization: Operating systems, compiler construction.
+  \end{itemize}
+
+\item[1996--2000] BA of Human Geography, Lund University, Sweden.
+
+\end{CV}
+
+\section{Work experience}
+
+\begin{CV}
+\item[2009--] Net Insight AB, Sweden
+  \begin{itemize}
+    \item Design and implementation of C++17 code in a distributed system, from FPGA 
+      register accesses up to the CLI and web support interface
+    \item Test-driven development with a heavy focus on unit testing
+    \item Control software for 100Gb Ethernet- and terabit-scale DTM switches
+    \item IP encapsulation for video feeds (SMPTE 2110, 2022-6)
+    \item Design and DPDK driver of a custom high-performance network interface
+    \item Linux kernel driver for the same network interface
+  \end{itemize}
+Keywords: git, C++17, unit testing, Python, DPDK, kernel drivers, Ethernet
+
+\item[2006--2009] Ericsson AB, Sweden
+
+  \begin{itemize}
+  \item Adaptation of the Linux kernel for custom Freescale PowerPC-based
+    switch boards as well as kernel drivers for specialized hardware
+  \item A Linux-based root filesystem and basic userland (``distribution'')
+  \end{itemize}
+Keywords: C, kernel drivers
+
+\item[Fall 2002--2008] Blekinge Institute of Technology, Sweden
+
+  \begin{itemize}
+  \item Implementor of SMP support for the Dicos operating system
+    kernel in the Ericsson TSP system on Intel IA-32 hardware.
+  \item Implementor of the Cibyl binary translator and programming environment
+    for C/C++ support in a J2ME environment, including aggresive optimizations
+    and GDB support
+  \item Lecturing and assisting undergraduate students in low-level
+    programming (MIPS and Intel IA-32 assembly) and game programming courses.
+  \end{itemize}
+Keywords: research, assembly language, operating systems
+
+\item[Summer 2001, spring 2002] University of Karlsruhe, Germany.
+  \begin{itemize}
+  \item Research student the Systems Architecture group, system-level work
+    with the L4Ka::Hazelnut microkernel.
+  \item As MSc. thesis, a device driver framework for the Prime multiserver
+    operating system was designed and implemented. The device driver framework
+    handles virtual to physical address translation through a hierarchy of
+    memory servers as well as time-limited memory pinning for DMA.
+  \item The Qt/Embedded library was ported to run directly on top of the
+    L4Ka::Hazelnut kernel, with a minimal libc implemented and drivers for
+    SVGA graphics and terminal input.
+  \end{itemize}
+Keywords: operating systems, kernel drivers
+
+
+\item[Summers 2000, 2002] Axis communications, Lund, Sweden.
+  \begin{itemize}
+  \item Monitoring extensions, bug fixes and test programs for the Linux journalling
+    flash file system (JFFS) was implemented.
+  \item A presentation tool which displays and selects interesting video feeds
+    from multiple network cameras in realtime was implemented.
+  \end{itemize}
+
+\item[Other] Participation in open source projects (https://github.com/SimonKagstrom)
+
+During the years, I've written and contributed to a lot of open source software, most
+of which is available on my github account. Some highlights are:
+
+  \begin{itemize}
+    \item Implementor of Kcov, a code coverage tool similar to gcov
+      which instruments binaries and tests coverage without compiler
+      options.
+    \item Designer and imlpementor of the Cibyl programming environment, a
+      binary translator MIPS-Java bytecode which allows C/C++ programs
+      to run on J2ME-capable mobile phones. Using this, I was the first person
+      on Earth to finish Space Quest on a mobile phone.
+    \item Implementor of EmilPRO and Dissy, two versions of graphical disassemblers for
+      multiple architectures in Qt and GTK.
+  \end{itemize}
+\end{CV}
+%\section{References}
+%
+%\noindent These persons are familiar with my professional qualifications and my character:
+
+%\begin{table}[h]
+%\begin{tabular}{@{}ll@{}}
+%\textbf{Prof. Lars Lundberg}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~& \textbf{Volkmar Uhlig} \\
+%PhD. Thesis supervisor  & MSc. Thesis supervisor \\
+%P.O. Box 520 & Luisenstrasse 2\\
+%372 25 Ronneby & 76137 Karlsruhe \\
+%Sweden & Germany \\
+%Email: \texttt{llu@bth.se} & Email: \texttt{volkmar@ira.uka.de}\\
+%Phone: +46-457-385833 & Phone: +49-172-3528285
+%\end{tabular}
+%\end{table}
+
+\bibliography{bib}
+
+\nocite{kagstrom08phd, kagstrom05experiences, kagstrom05appkern,
+  kagstrom07cibyl}
+\noindent
+
+
+\end{document}
