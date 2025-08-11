@@ -59,37 +59,88 @@
 
 \end{CV}
 
+\section{Participation in open source projects}
+
+\begin{CV}
+
+\item[1990s--today]
+
+As a hobby and sometimes for my day-to-day work, I have started and contributed to a
+large number of open source projects, most of which are on my github account
+(\url{https://github.com/SimonKagstrom}). Some of what I think are highlights are kcov,
+maelir, cibyl and dissy / emilpro.
+
+Maelir is a ESP32-based speedometer-style GPS plotter for my classic Norwegian fiberglass
+boat, implemented in C++23. Kcov is a code coverage tool which is built around breakpoints
+and therefore can be used on non-instrumented binaries. It also supports multiple output
+formats and integration with other tools. 
+
+Further back, I wrote Cibyl, which is a binary translator and programming environment
+which translates MIPS binaries into Java bytecode to allow execution of a C/C++ program
+on a J2ME phone. Via Cibyl, in this way I was probably the first in the world to play
+Space Quest on a mobile phone. Dissy and Emilpro are two graphical disassemblers, which
+facilitate navigation and address/instruction searching when debugging at a really
+low level.
+
+\textbf{Keywords}: C, C++23, Python, git, github, ESP32, LVGL, embedded systems
+\end{CV}
+
 \section{Work experience}
 
 \begin{CV}
-\item[2009--] Net Insight AB, Sweden
-  \begin{itemize}
-    \item Design and implementation of C++17 code in a distributed system, from FPGA 
-      register accesses up to the CLI and web support interface
-    \item Test-driven development with a heavy focus on unit testing in C++ and system testing
-          in Python
-    \item Control software for 100Gb Ethernet- and terabit-scale DTM switches
-    \item IP encapsulation for video feeds (SMPTE 2110, 2022-6)
-    \item Design and implementation DPDK driver of a custom high-performance network interface
-    \item Linux kernel driver for the same network interface
-  \end{itemize}
-At Net Insight, I've become a very experienced C++ programmer and learned to love
-test driven development via unit testing.
+\item[2022--2025] Consultant at Profoto AB, Sweden
 
-Keywords: git, C++17, unit testing, Python, DPDK, kernel drivers, Ethernet
+During the consultancy assignment at Profoto, I have worked with professional studio lightning
+and flashes for photography. The products are based on STM32 MCUs, and I have worked on C++23
+code for target as well as in extensive unit tests (Doctest and Trompeloeil) and a Qt6-based
+simulator.
+
+I have been deeply involved in the design of the software platform used, and have implemented
+both hardware drivers, internal communication abstractions and the unit test environment. In
+addition, I have implemented much of the Python-based automated regression suite targeting
+both hardware and the simulator.
+
+The code for the target products involve e.g., display drivers, low-level UART handling,
+synchronization between IRQ and task context and the task execution environment. Higher up,
+I have implemented the DMX and RDM protocol handling, as well as parts of the user
+interface, and communication with radio modules.
+
+\item[2009--2022] Net Insight AB, Sweden
+  
+At Net Insight, I have worked with media transport on the company's proprietary hardware
+platform. During my years at Net Insight, I have implemented code in a highly asynchronous
+distributed system in C++17, all the way from controlling the hardware to the web interface.
+I have worked with test-driven development using unit tests with Catch2! and the Trompeloeil
+frameworks for virtually all implementation. In some of the projects I have also implemented
+drivers for high-performance network interfaces, both for DPDK and the Linux kernel.
+
+During the last years at Net Insight, I worked with IP video in a broadcast environment,
+mainly SMPTE 2022-6 and SMPTE 2110. The platform is built around a modular Ethernet switch,
+and my work spans both control software for the FPGA dataplane and configuration on a higher
+level.
+
+My contribution to Net Insight was, in addition to the implementation of C ++ code, also the
+design of how the software (and sometimes the FPGA interfaces) should work and be structured.
+I have also been a scrum master for a long time in the team I worked in.
+
+\textbf{Keywords}: Git, C++17, Unit testing, Python, DPDK, Kernel drivers, Ethernet, Switching, PlantUML
 
 \item[2006--2009] Ericsson AB, Sweden
+At Ericsson, I worked in two departments. First, I worked on the multiprocessor adaptations
+of the DICOS operating system on which parts of my dissertation were based. In connection
+with the department moving to Budapest in 2007, I spent the summer in Hungary transferring
+system knowledge to the Hungarian department via pair programming.
 
-  \begin{itemize}
-  \item Adaptation of the Linux kernel for custom Freescale PowerPC-based
-    switch boards as well as kernel drivers for specialized hardware
-  \item A Linux driver for a custom interrupt controller
-  \item A Linux-based root filesystem and basic userland (``distribution'')
-  \end{itemize}
+From 2007 I worked in a department that made Ethernet switches that were used internally as
+building blocks for other applications. In this role, I implemented Linux support for the
+PowerPC-based system one of the switches (CMXB) used, and also wrote drivers for the
+specialized hardware, including an interrupt controller. For the CMXB, I also built the root
+file system with the support needed for the userland applications, based on a Wind River
+Linux distribution.
 
-At Ericsson, I grew used to writing code for the Linux kernel.
+My contribution to Ericsson was mainly as an expert on the Linux kernel.
 
-Keywords: C, kernel drivers
+\textbf{Keywords}: C, kernel drivers
 
 \item[Fall 2002--2008] Blekinge Institute of Technology, Sweden
 
@@ -106,7 +157,7 @@ Keywords: C, kernel drivers
 During my PhD studies, I learned to pursue and investigate novel ideas, and
 got a good understanding of very low-level development.
 
-Keywords: research, assembly language, operating systems
+\textbf{Keywords}: research, assembly language, operating systems
 
 \item[Summer 2001, spring 2002] University of Karlsruhe, Germany.
   \begin{itemize}
@@ -121,7 +172,7 @@ Keywords: research, assembly language, operating systems
     SVGA graphics and terminal input.
   \end{itemize}
 
-Keywords: operating systems, kernel drivers
+\textbf{Keywords}: operating systems, kernel drivers
 
 
 \item[Summers 2000, 2002] Axis communications, Lund, Sweden.
@@ -132,24 +183,6 @@ Keywords: operating systems, kernel drivers
     from multiple network cameras in realtime was implemented.
   \end{itemize}
 
-\item[Other] Participation in open source projects (https://github.com/SimonKagstrom)
-
-During the years, I've written and contributed to a lot of open source software, most
-of which is available on my github account. I make programs because it's fun, and making
-them open source allows other people to use and contribute to the programs. Some highlights
-are:
-
-  \begin{itemize}
-    \item Implementor of Kcov, a code coverage tool similar to gcov
-      which instruments binaries and tests coverage without compiler
-      options.
-    \item Designer and imlpementor of the Cibyl programming environment, a
-      binary translator MIPS-Java bytecode which allows C/C++ programs
-      to run on J2ME-capable mobile phones. Using this, I was the first person
-      on Earth to finish Space Quest on a mobile phone.
-    \item Implementor of EmilPRO and Dissy, two versions of graphical disassemblers for
-      multiple architectures in Qt and GTK.
-  \end{itemize}
 \end{CV}
 %\section{References}
 %
